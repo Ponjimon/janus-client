@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1540217754666" clover="3.2.0">
+  <project timestamp="1540217754666" name="All files">
+    <metrics statements="47" coveredstatements="30" conditionals="11" coveredconditionals="7" methods="15" coveredmethods="13" elements="73" coveredelements="50" complexity="0" loc="47" ncloc="47" packages="3" files="3" classes="3">
+      <package name="client">
+        <metrics statements="16" coveredstatements="15" conditionals="0" coveredconditionals="0" methods="12" coveredmethods="11"/>
+        <file name="response.ts" path="/Users/simon/repos/janus-client/src/client/response.ts">
+          <metrics statements="16" coveredstatements="15" conditionals="0" coveredconditionals="0" methods="12" coveredmethods="11"/>
+          <line num="1" count="1" type="stmt"/>
+          <line num="3" count="1" type="stmt"/>
+          <line num="8" count="6" type="stmt"/>
+          <line num="9" count="6" type="stmt"/>
+          <line num="13" count="1" type="stmt"/>
+          <line num="17" count="1" type="stmt"/>
+          <line num="21" count="12" type="stmt"/>
+          <line num="25" count="0" type="stmt"/>
+          <line num="29" count="3" type="stmt"/>
+          <line num="33" count="3" type="stmt"/>
+          <line num="37" count="3" type="stmt"/>
+          <line num="41" count="1" type="stmt"/>
+          <line num="43" count="2" type="stmt"/>
+          <line num="47" count="1" type="stmt"/>
+          <line num="53" count="1" type="stmt"/>
+          <line num="57" count="1" type="stmt"/>
+        </file>
+      </package>
+      <package name="mock">
+        <metrics statements="21" coveredstatements="6" conditionals="3" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <file name="janus-response.ts" path="/Users/simon/repos/janus-client/src/mock/janus-response.ts">
+          <metrics statements="21" coveredstatements="6" conditionals="3" coveredconditionals="0" methods="1" coveredmethods="0"/>
+          <line num="3" count="1" type="stmt"/>
+          <line num="7" count="1" type="stmt"/>
+          <line num="22" count="0" type="stmt"/>
+          <line num="141" count="0" type="stmt"/>
+          <line num="151" count="2" type="stmt"/>
+          <line num="158" count="0" type="stmt"/>
+          <line num="165" count="1" type="stmt"/>
+          <line num="172" count="0" type="stmt"/>
+          <line num="183" count="0" type="stmt"/>
+          <line num="190" count="0" type="stmt"/>
+          <line num="197" count="0" type="stmt"/>
+          <line num="208" count="1" type="stmt"/>
+          <line num="225" count="1" type="stmt"/>
+          <line num="237" count="0" type="stmt"/>
+          <line num="249" count="0" type="stmt"/>
+          <line num="265" count="0" type="stmt"/>
+          <line num="294" count="0" type="stmt"/>
+          <line num="325" count="0" type="stmt"/>
+          <line num="327" count="0" type="stmt"/>
+          <line num="344" count="0" type="stmt"/>
+          <line num="364" count="0" type="stmt"/>
+        </file>
+      </package>
+      <package name="utils">
+        <metrics statements="10" coveredstatements="9" conditionals="8" coveredconditionals="7" methods="2" coveredmethods="2"/>
+        <file name="get-prop.ts" path="/Users/simon/repos/janus-client/src/utils/get-prop.ts">
+          <metrics statements="10" coveredstatements="9" conditionals="8" coveredconditionals="7" methods="2" coveredmethods="2"/>
+          <line num="1" count="1" type="stmt"/>
+          <line num="6" count="34" type="stmt"/>
+          <line num="8" count="19" type="stmt"/>
+          <line num="12" count="34" type="cond" truecount="3" falsecount="1"/>
+          <line num="13" count="0" type="stmt"/>
+          <line num="18" count="34" type="cond" truecount="2" falsecount="0"/>
+          <line num="19" count="15" type="stmt"/>
+          <line num="23" count="19" type="stmt"/>
+          <line num="24" count="19" type="stmt"/>
+          <line num="26" count="19" type="stmt"/>
+        </file>
+      </package>
+    </metrics>
+  </project>
+</coverage>

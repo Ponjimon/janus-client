@@ -1,0 +1,1169 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for mock/janus-response.ts</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../prettify.css" />
+    <link rel="stylesheet" href="../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../index.html">All files</a> / <a href="index.html">mock</a> janus-response.ts
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">28.57% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>6/21</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>0/3</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>0/1</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">28.57% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>6/21</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line low'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179
+180
+181
+182
+183
+184
+185
+186
+187
+188
+189
+190
+191
+192
+193
+194
+195
+196
+197
+198
+199
+200
+201
+202
+203
+204
+205
+206
+207
+208
+209
+210
+211
+212
+213
+214
+215
+216
+217
+218
+219
+220
+221
+222
+223
+224
+225
+226
+227
+228
+229
+230
+231
+232
+233
+234
+235
+236
+237
+238
+239
+240
+241
+242
+243
+244
+245
+246
+247
+248
+249
+250
+251
+252
+253
+254
+255
+256
+257
+258
+259
+260
+261
+262
+263
+264
+265
+266
+267
+268
+269
+270
+271
+272
+273
+274
+275
+276
+277
+278
+279
+280
+281
+282
+283
+284
+285
+286
+287
+288
+289
+290
+291
+292
+293
+294
+295
+296
+297
+298
+299
+300
+301
+302
+303
+304
+305
+306
+307
+308
+309
+310
+311
+312
+313
+314
+315
+316
+317
+318
+319
+320
+321
+322
+323
+324
+325
+326
+327
+328
+329
+330
+331
+332
+333
+334
+335
+336
+337
+338
+339
+340
+341
+342
+343
+344
+345
+346
+347
+348
+349
+350
+351
+352
+353
+354
+355
+356
+357
+358
+359
+360
+361
+362
+363
+364
+365
+366
+367
+368
+369</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import { JanusResponse } from '../janus.types';
+&nbsp;
+export default {
+    error: {
+        general: {
+            unauthorized(req): JanusResponse {
+                return {
+                    janus: 'error',
+                    transaction: req.transaction,
+                    error: {
+                        code: 403,
+                        reason:
+                            'Unauthorized request (wrong or missing secret/token)',
+                    },
+                };
+            },
+        },
+    },
+&nbsp;
+    general: {
+        info: function <span class="fstat-no" title="function not covered" >info(</span>req): JanusResponse {
+<span class="cstat-no" title="statement not covered" >            return {</span>
+                janus: 'server_info',
+                transaction: req.transaction,
+                name: 'Janus WebRTC Gateway',
+                version: 11,
+                version_string: '0.1.1',
+                author: 'Meetecho s.r.l.',
+                'log-to-stdout': 'true',
+                'log-to-file': 'false',
+                data_channels: 'true',
+                'server-name': 'MyJanusInstance',
+                'local-ip': '192.168.0.166',
+                ipv6: 'false',
+                'ice-tcp': 'true',
+                api_secret: 'false',
+                auth_token: 'false',
+                transports: {
+                    'janus.transport.rabbitmq': {
+                        name: 'JANUS RabbitMQ transport plugin',
+                        author: 'Meetecho s.r.l.',
+                        description:
+                            'This transport plugin adds RabbitMQ support to the Janus API via rabbitmq-c.',
+                        version_string: '0.0.1',
+                        version: 1,
+                    },
+                    'janus.transport.http': {
+                        name: 'JANUS REST (HTTP/HTTPS) transport plugin',
+                        author: 'Meetecho s.r.l.',
+                        description:
+                            'This transport plugin adds REST (HTTP/HTTPS) support to the Janus API via libmicrohttpd.',
+                        version_string: '0.0.2',
+                        version: 2,
+                    },
+                    'janus.transport.websockets': {
+                        name: 'JANUS WebSockets transport plugin',
+                        author: 'Meetecho s.r.l.',
+                        description:
+                            'This transport plugin adds WebSockets support to the Janus API via libwebsockets.',
+                        version_string: '0.0.1',
+                        version: 1,
+                    },
+                    'janus.transport.pfunix': {
+                        name: 'JANUS Unix Sockets transport plugin',
+                        author: 'Meetecho s.r.l.',
+                        description:
+                            'This transport plugin adds Unix Sockets support to the Janus API.',
+                        version_string: '0.0.1',
+                        version: 1,
+                    },
+                },
+                plugins: {
+                    'janus.plugin.audiobridge': {
+                        name: 'JANUS AudioBridge plugin',
+                        author: 'Meetecho s.r.l.',
+                        description:
+                            'This is a plugin implementing an audio conference bridge for Janus, mixing Opus streams.',
+                        version_string: '0.0.8',
+                        version: 8,
+                    },
+                    'janus.plugin.voicemail': {
+                        name: 'JANUS VoiceMail plugin',
+                        author: 'Meetecho s.r.l.',
+                        description:
+                            'This is a plugin implementing a very simple VoiceMail service for Janus, recording Opus streams.',
+                        version_string: '0.0.6',
+                        version: 6,
+                    },
+                    'janus.plugin.echotest': {
+                        name: 'JANUS EchoTest plugin',
+                        author: 'Meetecho s.r.l.',
+                        description:
+                            'This is a trivial EchoTest plugin for Janus, just used to showcase the plugin interface.',
+                        version_string: '0.0.6',
+                        version: 6,
+                    },
+                    'janus.plugin.recordplay': {
+                        name: 'JANUS Record&amp;Play plugin',
+                        author: 'Meetecho s.r.l.',
+                        description:
+                            'This is a trivial Record&amp;Play plugin for Janus, to record WebRTC sessions and replay them.',
+                        version_string: '0.0.3',
+                        version: 3,
+                    },
+                    'janus.plugin.videoroom': {
+                        name: 'JANUS VideoRoom plugin',
+                        author: 'Meetecho s.r.l.',
+                        description:
+                            'This is a plugin implementing a videoconferencing SFU (Selective Forwarding Unit) for Janus, that is an audio/video router.',
+                        version_string: '0.0.6',
+                        version: 6,
+                    },
+                    'janus.plugin.videocall': {
+                        name: 'JANUS VideoCall plugin',
+                        author: 'Meetecho s.r.l.',
+                        description:
+                            'This is a simple video call plugin for Janus, allowing two WebRTC peers to call each other through the gateway.',
+                        version_string: '0.0.5',
+                        version: 5,
+                    },
+                    'janus.plugin.streaming': {
+                        name: 'JANUS Streaming plugin',
+                        author: 'Meetecho s.r.l.',
+                        description:
+                            'This is a streaming plugin for Janus, allowing WebRTC peers to watch/listen to pre-recorded files or media generated by gstreamer.',
+                        version_string: '0.0.5',
+                        version: 5,
+                    },
+                    'janus.plugin.sip': {
+                        name: 'JANUS SIP plugin',
+                        author: 'Meetecho s.r.l.',
+                        description:
+                            'This is a simple SIP plugin for Janus, allowing WebRTC peers to register at a SIP server and call SIP user agents through the gateway.',
+                        version_string: '0.0.6',
+                        version: 6,
+                    },
+                },
+            };
+        },
+        ack(req): JanusResponse {
+<span class="cstat-no" title="statement not covered" >            return {</span>
+                janus: 'ack',
+                session_id: req.session_id,
+                transaction: req.transaction,
+            };
+        },
+    },
+&nbsp;
+    session: {
+        create(req): JanusResponse {
+            return {
+                janus: 'success',
+                transaction: req.transaction,
+                data: { id: 1424579626 },
+            };
+        },
+        destroy(req): JanusResponse {
+<span class="cstat-no" title="statement not covered" >            return {</span>
+                janus: 'success',
+                transaction: req.transaction,
+                data: { id: 1424579626 },
+            };
+        },
+        keepAlive(req): JanusResponse {
+            return {
+                janus: 'ack',
+                session_id: req.session_id,
+                transaction: req.transaction,
+            };
+        },
+        createVideoRoomHandle(req, handle): JanusResponse {
+<span class="cstat-no" title="statement not covered" >            return {</span>
+                janus: 'success',
+                session_id: req.session_id,
+                transaction: req.transaction,
+                data: { id: handle },
+            };
+        },
+    },
+&nbsp;
+    handle: {
+        trickle(req): JanusResponse {
+<span class="cstat-no" title="statement not covered" >            return {</span>
+                janus: 'ack',
+                session_id: req.session_id,
+                transaction: req.transaction,
+            };
+        },
+        detach(req): JanusResponse {
+<span class="cstat-no" title="statement not covered" >            return {</span>
+                janus: 'success',
+                session_id: req.session_id,
+                transaction: req.transaction,
+            };
+        },
+        hangup(req): JanusResponse {
+<span class="cstat-no" title="statement not covered" >            return {</span>
+                janus: 'success',
+                session_id: req.session_id,
+                transaction: req.transaction,
+            };
+        },
+    },
+&nbsp;
+    videoRoomHandle: {
+        error: {
+            destroy(req): JanusResponse {
+                return {
+                    janus: 'success',
+                    session_id: req.session_id,
+                    sender: req.handle_id,
+                    transaction: req.transaction,
+                    plugindata: {
+                        plugin: 'janus.plugin.videoroom',
+                        data: {
+                            videoroom: 'event',
+                            error_code: 426,
+                            error: 'No such room (' + req.body.room + ')',
+                        },
+                    },
+                };
+            },
+        },
+        create(req): JanusResponse {
+            return {
+                janus: 'success',
+                session_id: req.session_id,
+                sender: req.handle_id,
+                transaction: req.transaction,
+                plugindata: {
+                    plugin: 'janus.plugin.videoroom',
+                    data: { videoroom: 'created', room: 2146929290 },
+                },
+            };
+        },
+        destroy(req): JanusResponse {
+<span class="cstat-no" title="statement not covered" >            return {</span>
+                janus: 'success',
+                session_id: req.session_id,
+                sender: req.handle_id,
+                transaction: req.transaction,
+                plugindata: {
+                    plugin: 'janus.plugin.videoroom',
+                    data: { videoroom: 'destroyed', room: 2146929290 },
+                },
+            };
+        },
+        exists(req): JanusResponse {
+<span class="cstat-no" title="statement not covered" >            return {</span>
+                janus: 'success',
+                session_id: req.session_id,
+                sender: req.handle_id,
+                transaction: req.transaction,
+                plugindata: {
+                    plugin: 'janus.plugin.videoroom',
+                    data: {
+                        videoroom: 'success',
+                        room: 2146929290,
+                        exists: 'true',
+                    },
+                },
+            };
+        },
+        list(req): JanusResponse {
+<span class="cstat-no" title="statement not covered" >            return {</span>
+                janus: 'success',
+                session_id: req.session_id,
+                sender: req.handle_id,
+                transaction: req.transaction,
+                plugindata: {
+                    plugin: 'janus.plugin.videoroom',
+                    data: {
+                        videoroom: 'success',
+                        list: [
+                            {
+                                room: 2146929290,
+                                description: 'Room 1790787516',
+                                max_publishers: 3,
+                                bitrate: 0,
+                                fir_freq: 0,
+                                audiocodec: 'opus',
+                                videocodec: 'vp8',
+                                record: 'false',
+                                num_participants: 0,
+                                pin_required: false,
+                                bitrate_cap: false,
+                            },
+                        ],
+                    },
+                },
+            };
+        },
+        listParticipants(req): JanusResponse {
+<span class="cstat-no" title="statement not covered" >            return {</span>
+                janus: 'success',
+                session_id: req.session_id,
+                sender: req.handle_id,
+                transaction: req.transaction,
+                plugindata: {
+                    plugin: 'janus.plugin.videoroom',
+                    data: {
+                        videoroom: 'participants',
+                        room: req.body.room,
+                        participants: [
+                            {
+                                id: 1,
+                                publisher: true,
+                                talking: false,
+                                internal_audio_ssrc: 0,
+                                internal_video_ssrc: 0,
+                            },
+                            {
+                                id: 2,
+                                publisher: 'true',
+                                talking: false,
+                                internal_audio_ssrc: 0,
+                                internal_video_ssrc: 0,
+                            },
+                        ],
+                    },
+                },
+            };
+        },
+        join(req): JanusResponse {
+<span class="cstat-no" title="statement not covered" >            switch (req.body.ptype) {</span>
+                case 'publisher':
+<span class="cstat-no" title="statement not covered" >                    return {</span>
+                        janus: 'event',
+                        session_id: req.session_id,
+                        sender: req.handle_id,
+                        transaction: req.transaction,
+                        plugindata: {
+                            plugin: 'janus.plugin.videoroom',
+                            data: {
+                                videoroom: 'joined',
+                                room: req.body.room,
+                                description: `Room${req.body.room}`,
+                                id: 1269651309,
+                                publishers: [],
+                            },
+                        },
+                    };
+                case 'listener':
+<span class="cstat-no" title="statement not covered" >                    return {</span>
+                        janus: 'event',
+                        session_id: req.session_id,
+                        sender: req.handle_id,
+                        transaction: req.transaction,
+                        plugindata: {
+                            plugin: 'janus.plugin.videoroom',
+                            data: {
+                                videoroom: 'attached',
+                                room: req.body.room,
+                                id: 982595215,
+                            },
+                        },
+                        jsep: {
+                            type: 'offer',
+                            sdp:
+                                'v=0\r\no=- 1478603918984998 1478603918984997 IN IP4 192.168.0.166\r\ns=Room 1373398250\r\nt=0 0\r\na=ice-lite\r\na=group:BUNDLE audio video\r\na=msid-semantic: WMS janus\r\nm=audio 1 RTP/SAVPF 111\r\nc=IN IP4 192.168.0.166\r\na=mid:audio\r\na=sendonly\r\na=rtcp-mux\r\na=ice-ufrag:qPYE\r\na=ice-pwd:QNSr/4swPap0JAW/3thoim\r\na=ice-options:trickle\r\na=fingerprint:sha-256 D2:B9:31:8F:DF:24:D8:0E:ED:D2:EF:25:9E:AF:6F:B8:34:AE:53:9C:E6:F3:8F:F2:64:15:FA:E8:7F:53:2D:38\r\na=setup:actpass\r\na=connection:new\r\na=rtpmap:111 opus/48000/2\r\na=ssrc:552031021 cname:janusaudio\r\na=ssrc:552031021 msid:janus janusa0\r\na=ssrc:552031021 mslabel:janus\r\na=ssrc:552031021 label:janusa0\r\na=candidate:1 1 udp 2013266431 192.168.0.166 34190 typ host\r\na=candidate:2 1 tcp 1019216383 192.168.0.166 0 typ host tcptype active\r\na=candidate:3 1 tcp 1015022079 192.168.0.166 28666 typ host tcptype passive\r\na=candidate:1 2 udp 2013266430 192.168.0.166 26395 typ host\r\na=candidate:2 2 tcp 1019216382 192.168.0.166 0 typ host tcptype active\r\na=candidate:3 2 tcp 1015022078 192.168.0.166 28551 typ host tcptype passive\r\nm=video 1 RTP/SAVPF 100\r\nc=IN IP4 192.168.0.166\r\na=mid:video\r\na=sendonly\r\na=rtcp-mux\r\na=ice-ufrag:EAp8\r\na=ice-pwd:isef237222KQY+VguYZ5nH\r\na=ice-options:trickle\r\na=fingerprint:sha-256 D2:B9:31:8F:DF:24:D8:0E:ED:D2:EF:25:9E:AF:6F:B8:34:AE:53:9C:E6:F3:8F:F2:64:15:FA:E8:7F:53:2D:38\r\na=setup:actpass\r\na=connection:new\r\na=rtpmap:100 VP8/90000\r\na=rtcp-fb:100 ccm fir\r\na=rtcp-fb:100 nack\r\na=rtcp-fb:100 nack pli\r\na=rtcp-fb:100 goog-remb\r\na=ssrc:154813501 cname:janusvideo\r\na=ssrc:154813501 msid:janus janusv0\r\na=ssrc:154813501 mslabel:janus\r\na=ssrc:154813501 label:janusv0\r\na=candidate:4 1 udp 2013266431 192.168.0.166 30530 typ host\r\na=candidate:5 1 tcp 1019216383 192.168.0.166 0 typ host tcptype active\r\na=candidate:6 1 tcp 1015022079 192.168.0.166 33791 typ host tcptype passive\r\na=candidate:4 2 udp 2013266430 192.168.0.166 20569 typ host\r\na=candidate:5 2 tcp 1019216382 192.168.0.166 0 typ host tcptype active\r\na=candidate:6 2 tcp 1015022078 192.168.0.166 31429 typ host tcptype passive\r\n',
+                        },
+                    };
+                default:
+<span class="cstat-no" title="statement not covered" >                    return null;</span>
+            }
+        },
+    },
+};
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Mon Oct 22 2018 16:15:54 GMT+0200 (Central European Summer Time)
+</div>
+</div>
+<script src="../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../sorter.js"></script>
+</body>
+</html>

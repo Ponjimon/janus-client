@@ -1,23 +1,7 @@
-# Eclipse
-.classpath
-.project
-.settings/
-
-# Intellij
-.idea/
-*.iml
-*.iws
-
-# Mac
-.DS_Store
-
-# Maven
-log/
-target/
-
-# Node.js
-node_modules/
-npm-debug.log
-
-# Bower
-bower_components/
+.env*
+dist
+package-lock.json
+node_modules
+.idea
+.vscode
+*.log
